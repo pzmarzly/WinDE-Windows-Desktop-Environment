@@ -4,7 +4,6 @@ Debugged and refreshed to work with new versions of windows.
 All of MerulaShell Libs will be deleted after migration
  */
 using System;
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
