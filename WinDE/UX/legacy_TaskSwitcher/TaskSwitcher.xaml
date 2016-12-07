@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window
+	x:Class="WinDE.TaskSwitcher" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Title="WinDE"
+	WindowStartupLocation="Manual"
+	WindowStyle="None"
+	StateChanged="Window_StateChanged"
+	AllowsTransparency="True"
+	Topmost="True"
+	Left="0"
+	Top="0"
+	HorizontalAlignment="Stretch"
+	MinHeight="30"
+	MaxHeight="50"
+	Background="Black"
+	WindowState="Normal">
+	<Grid
+		Background="#FF0F0F0F">
+		<StackPanel
+			Orientation="Horizontal"
+			x:Name="TaskPanel"
+			Width="532"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Stretch"
+			Margin="47,0,0,0" />
+		<Button
+			Content="Apps"
+			HorizontalContentAlignment="Left"
+			BorderBrush="{x:Null}"
+			Foreground="White"
+			Width="47"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Stretch"
+			Margin="0,0,0,0"
+			Click="LaunchApps">
+			<Button.Style>
+				<Style
+					TargetType="{x:Type Button}">
+					<Setter
+						Property="Background"
+						Value="Black" />
+					<Setter
+						Property="Foreground"
+						Value="White" />
+					<Setter
+						Property="Template">
+						<Setter.Value>
+							<ControlTemplate
+								TargetType="{x:Type Button}">
+								<Border
+									Background="{TemplateBinding Background}">
+									<ContentPresenter
+										HorizontalAlignment="Center"
+										VerticalAlignment="Center" />
+								</Border>
+							</ControlTemplate>
+						</Setter.Value>
+					</Setter>
+					<Style.Triggers>
+						<Trigger
+							Property="IsMouseOver"
+							Value="True">
+							<Setter
+								Property="Background"
+								Value="Lime" />
+						</Trigger>
+					</Style.Triggers>
+				</Style>
+			</Button.Style>
+		</Button>
+		<Label
+			x:Name="Clock"
+			Background="{x:Null}"
+			Foreground="White"
+			Content="lol"
+			FontSize="9"
+			FontFamily="Verdana"
+			FontWeight="Light"
+			HorizontalContentAlignment="Center"
+			VerticalContentAlignment="Bottom"
+			Width="51"
+			Height="26"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Right"
+			VerticalAlignment="Top"
+			Margin="0,-8,0,0" />
+	</Grid>
+</Window>
